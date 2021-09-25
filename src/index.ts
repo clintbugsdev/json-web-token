@@ -1,6 +1,3 @@
-export const sum = (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('boop');
-  }
-  return a + b;
-};
+export { default as decode } from './decode';
+export { default as sign } from './sign';
+export { default as verify } from './verify';
