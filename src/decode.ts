@@ -9,7 +9,7 @@ function decode({ token }: DecodeInput) {
     throw new Error('Invalid JWT');
   }
 
-  const [_, payload] = parts;
+  const payload = parts[1];
 
   const buf = Buffer.from(payload, 'base64').toString('utf-8');
   return JSON.parse(buf);
